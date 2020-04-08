@@ -47,7 +47,8 @@ Additional Docs
 
  1. [Prerequisites](docs/prerequisites.md)
  2. [Contributing](docs/contributing.md)
- 5. [Debugging](docs/debugging.md)
- 6. [Gotchas](docs/gotchas.md)
- 7. [Deployment](docs/deployment.md)
- 9. [Node Version](docs/node-version.md)
+ 3. [Debugging](docs/debugging.md)
+ 4. [Gotchas](docs/gotchas.md)
+ 5. [Deployment](docs/deployment.md)
+ 6. [Node Version](docs/node-version.md)
+ 7. [Branches](docs/branches.md)
