@@ -13,7 +13,9 @@
     "test": "jest --config test-config.json",
     "ci:test": "npm run test -- --ci",
     "lint": "eslint --ext .js --ignore-path .gitignore .",
-    "debug": "open 'rndebugger://set-debugger-loc?host=localhost&port=8081'"
+    "debug": "open 'rndebugger://set-debugger-loc?host=localhost&port=8081'",
+    "npm:audit": "npm run _npm:audit:spec",
+    "_npm:audit:spec": "audit-ci --critical"
   },
   "dependencies": {
     "react": "16.11.0",
@@ -22,6 +24,7 @@
   "devDependencies": {
     "@babel/core": "^7.6.2",
     "@babel/runtime": "^7.6.2",
+    "audit-ci": "^2.5.1",
     "babel-jest": "^24.9.0",
     "eslint": "^6.5.1",
     "jest": "^24.9.0",
