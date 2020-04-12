@@ -1,0 +1,116 @@
+version: 2.1
+
+# --------------------------------
+# common : build environments
+# --------------------------------
+
+orbs:
+  node: circleci/node@2.0.0
+
+executors:
+  node-executor: node/default
+
+  android-executor:
+    docker:
+      - image: circleci/android:api-29-node
+
+  ios-executor:
+    macos:
+      xcode: 11.4.0
+
+# --------------------------------
+# commands
+# --------------------------------
+
+commands:
+  run_node_env_info:
+    description: 'Print Environment Info'
+    steps:
+      - run:
+          command: |
+            . ./.circleci/utils.sh
+            print_heading “environment versions:”
+            print_os_versions
+            print_node_versions
+            print_docker_versions
+
+  lint_js:
+    description: 'Audit npm dependencies'
+    steps:
+      - run: npm run npm:audit
+
+  npm_audit:
+    description: 'Lint JS'
+    steps:
+      - run: npm run lint:js
+
+  bundle_ios:
+    description: 'iOS bundle'
+    steps:
+      - run: npm run bundle:ios
+
+  bundle_android:
+    description: 'Android bundle'
+    steps:
+      - run: npm run bundle:android
+
+# --------------------------------
+# jobs
+# --------------------------------
+
+jobs:
+  install_npm_dependencies:
+    executor: node-executor
+    steps:
+      - run_node_env_info
+      - node/install-packages
+      - persist_to_workspace:
+          root: ~/build
+          paths:
+            - node_modules
+    working_directory: ~/build
+
+  linting_and_auditing:
+    executor: node-executor
+    steps:
+      - run_node_env_info
+      - lint_js
+      - npm_audit
+    working_directory: ~/build
+
+  bundle_ios:
+    executor: node-executor
+    steps:
+      - run_node_env_info
+      - bundle_ios
+    working_directory: ~/build
+
+  bundle_android:
+    executor: node-executor
+    steps:
+      - run_node_env_info
+      - bundle_android
+    working_directory: ~/build
+
+# --------------------------------
+# workflows
+# --------------------------------
+
+workflows:
+  pull-request:
+    jobs:
+      - install_npm_dependencies:
+          filters:
+            branches:
+              ignore:
+                - master
+                - develop
+      - linting_and_auditing:
+          requires:
+            - install_npm_dependencies
+      - bundle_ios:
+          requires:
+            - install_npm_dependencies
+      - bundle_android:
+          requires:
+            - install_npm_dependencies
