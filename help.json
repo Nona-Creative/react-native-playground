@@ -1,0 +1,18 @@
+{
+  "start": "run the app",
+  "bundler:start": "create bundle",
+  "bundler:start:reset": "create bundle with reset cache",
+  "lint": "run linter",
+  "lint:fix": "run linter and fix all errors",
+  "npm:audit": "audit all npm dependencies for critical vulnerabilities",
+  "reset": "remove all node modules and reinstall them",
+  "start:android": "run android version of the app",
+  "bundle:android": "create android bundle",
+  "start:ios": "run ios version of the app",
+  "bundle:ios": "create ios bundle",
+  "test": "run all unit tests",
+  "test:coverage": "run all unit tests with coverage",
+  "test:watch": "run all unit tests in watch mode",
+  "ci:test": "test circle ci configuration locally",
+  "debug": "run the debugger on port 8081"
+}
