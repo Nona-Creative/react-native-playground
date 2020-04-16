@@ -20,43 +20,20 @@ const App = () => {
     <>
       <NavigationContainer>
         <Stack.Navigator initialRouteName="Home">
-          <SafeAreaView>
-            <View style={styles.body}>
-              <View style={styles.sectionContainer}>
-                <Text style={styles.sectionTitle}>React Native Playground</Text>
-                <Stack.Screen
-                  name="Screen1"
-                  component={Screen1}
-                  options={{ title: 'Screen 1' }}
-                />
-                <Stack.Screen
-                  name="Screen2"
-                  component={Screen2}
-                  options={{ title: 'Screen 2' }}
-                />
-              </View>
-            </View>
-          </SafeAreaView>
+          <Stack.Screen
+            name="Screen1"
+            component={Screen1}
+            options={{ title: 'Screen 1' }}
+          />
+          <Stack.Screen
+            name="Screen2"
+            component={Screen2}
+            options={{ title: 'Screen 2' }}
+          />
         </Stack.Navigator>
       </NavigationContainer>
     </>
   )
 }
-
-const styles = StyleSheet.create({
-  body: {
-    backgroundColor: Colors.white,
-  },
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    textAlign: 'center',
-    fontWeight: '600',
-    color: Colors.black,
-  },
-})
 
 export default App
