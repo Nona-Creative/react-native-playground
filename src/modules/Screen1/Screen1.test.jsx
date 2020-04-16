@@ -7,6 +7,8 @@ import { Screen1 } from './Screen1'
 // eslint-disable-next-line import/order
 import renderer from 'react-test-renderer'
 
-it('renders correctly', () => {
-  renderer.create(<Screen1 />)
+describe('Screen1', () => {
+  it('should successfully render', () => {
+    renderer.create(<Screen1 />)
+  })
 })
