@@ -1,41 +1,14 @@
 import React from 'react'
-import {
-  SafeAreaView,
-  StyleSheet,
-  View,
-  Text,
-} from 'react-native'
+import { SafeAreaView, Text } from 'react-native'
 
-import { Colors } from 'react-native/Libraries/NewAppScreen'
+import CommonStyles from '../../common/styles'
 
 const App = () => {
   return (
-    <>
-      <SafeAreaView>
-        <View style={styles.body}>
-          <View style={styles.sectionContainer}>
-            <Text style={styles.sectionTitle}>React Native Playground</Text>
-          </View>
-        </View>
-      </SafeAreaView>
-    </>
+    <SafeAreaView style={CommonStyles.container}>
+      <Text style={CommonStyles.title}>React Native Playground</Text>
+    </SafeAreaView>
   )
 }
-
-const styles = StyleSheet.create({
-  body: {
-    backgroundColor: Colors.white,
-  },
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    textAlign: 'center',
-    fontWeight: '600',
-    color: Colors.black,
-  },
-})
 
 export default App
