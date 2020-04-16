@@ -1,14 +1,20 @@
 import 'react-native'
 import React from 'react'
+import { Provider } from 'react-redux'
 
 import App from './App'
+import { store } from '../../common/redux'
 
 // Note: test renderer must be required after react-native.
 // eslint-disable-next-line import/order
-import renderer from 'react-test-renderer'
+import { create } from 'react-test-renderer'
 
-describe('App', () => {
+describe('modules/App', () => {
   it('should successfully render', () => {
-    renderer.create(<App />)
+    create(
+      <Provider store={store}>
+        <App />
+      </Provider>
+    )
   })
 })

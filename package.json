@@ -11,13 +11,16 @@
     "bundler:start:reset": "react-native start --config rn-cli.config.js --reset-cache",
     "bundle:ios": "react-native bundle --entry-file App.js --platform ios --dev false --bundle-output ios/main.jsbundle --assets-dest ios --sourcemap-output ios/main.jsbundle.map",
     "bundle:android": "react-native bundle --entry-file App.js --platform android --dev false --bundle-output android/main.jsbundle --assets-dest android --sourcemap-output android/main.jsbundle.map",
-    "test": "jest --config test-config.json",
-    "test:watch": "jest --config test-config.json --watch",
-    "ci:test": "npm run test -- --ci",
+    "test": "jest --config test-config.json --ci",
+    "test:watch": "npm run test -- --watch",
+    "test:ui": "jest --config test-ui-config.json",
+    "test:ui:watch": "npm run test:ui -- --watch",
+    "ci:test": "npm run test",
     "lint": "eslint --ext .js --ignore-path .gitignore .",
     "debug": "open 'rndebugger://set-debugger-loc?host=localhost&port=8081'"
   },
   "dependencies": {
+    "ramda": "^0.27.0",
     "react": "16.11.0",
     "react-native": "0.62.1",
     "react-redux": "^7.2.0",
@@ -36,6 +39,7 @@
     "git-compose": "^0.1.1",
     "jest": "^24.9.0",
     "metro-react-native-babel-preset": "^0.58.0",
-    "react-test-renderer": "16.11.0"
+    "react-test-renderer": "16.11.0",
+    "sinon": "^9.0.2"
   }
 }
