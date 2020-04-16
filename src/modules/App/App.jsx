@@ -10,8 +10,8 @@ import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 import { Colors } from 'react-native/Libraries/NewAppScreen'
 
-import { Screen1 } from '../Screen1/Screen1'
-import { Screen2 } from '../Screen2/Screen2'
+import Screen1 from '../Screen1'
+import Screen2 from '../Screen2'
 
 const Stack = createStackNavigator()
 
