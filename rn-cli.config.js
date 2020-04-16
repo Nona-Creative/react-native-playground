@@ -6,6 +6,6 @@ module.exports = {
       /android\/.*/,
       /ios\/.*/,
     ]),
-    sourceExts: ['js', 'json', 'ts', 'tsx', 'jsx']
+    sourceExts: ['js', 'json', 'ts', 'tsx', 'jsx'],
   },
 }
