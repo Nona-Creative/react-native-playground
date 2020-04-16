@@ -1,6 +1,9 @@
 {
   "preset": "react-native",
   "testMatch": [
-    "**/src/**/*.test.js"
-  ]
+    "**/src/**/*.test.(js|jsx)"
+  ],
+  "transform": {
+    "^.+\\.jsx?$": "babel-jest"
+  }
 }

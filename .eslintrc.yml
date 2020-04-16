@@ -1,3 +1,40 @@
 root: true
+env:
+  jest: true
+globals:
+  __DEV__: true
 extends:
-  - '@react-native-community'
+  - 'airbnb'
+  - 'prettier'
+  - 'prettier/react'
+rules:
+  import/prefer-default-export:
+    - off
+  indent:
+    - error
+    - 2
+  linebreak-style:
+    - error
+    - unix
+  quotes:
+    - error
+    - single
+    - avoid-escape
+  semi:
+    - error
+    - never
+  eol-last:
+    - error
+    - always
+  comma-spacing:
+    - error
+    - after: true
+  no-multiple-empty-lines:
+    - error
+    - max: 1
+  comma-dangle:
+    - error
+    - always-multiline
+  object-curly-spacing:
+    - error
+    - always
