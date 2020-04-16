@@ -1,5 +1,5 @@
-React Native Playground :: Gotchas
-===
+React Native Gotchas
+---
 
 App won't build
 ---
@@ -14,6 +14,7 @@ If the app won't rebuild follow this:
  7. Run`bundle exec pod install`
  8. Run `npm run start:ios`
  9. Try run `npm run start:ios` again (somethings the 2nd time is the charm)
+
 
 XCode 10 Build failure
 ---

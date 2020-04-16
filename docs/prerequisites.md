@@ -1,4 +1,4 @@
-React Native Playground :: Prerequisites & Setup
+Prerequisites & Setup
 ===
 
 Common Prerequisites & Setup (iOS & Android)
@@ -14,6 +14,7 @@ Install Ruby dependencies:
 
  - ``gem install bundler``
  - ``bundle install``
+
 
 iOS Prerequisites & Setup
 ---
@@ -59,6 +60,7 @@ File < Workspace settings  < Build settings: Set as Legacy build system.
 ```bash
 react-native link <EXTENSION NAME>
 ```
+
 
 Android Prerequisites & Setup
 ---

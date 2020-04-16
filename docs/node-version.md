@@ -1,4 +1,4 @@
-React Native Playground :: Node Version
+Node Version
 ===
 
 The Node version for this project is automatically managed by:

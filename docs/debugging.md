@@ -1,4 +1,4 @@
-React Native Playground :: Debugging
+Debugging
 ===
 
 React Native Debugger
@@ -17,6 +17,7 @@ React Native Debugger
     ```bash
     npm run start:ios
     ```
+
 
 Reactotron
 ---
@@ -37,6 +38,7 @@ Reactotron
     npm run start:ios
     ```
 
+
 IDE Debugging
 ---
 
@@ -45,6 +47,7 @@ Debugging can be enabled in the emulator/simulator.
 The debugging window will open in your browser by default when you choose the option in the emulator.
 
 You can also listen (on ``http://localhost:8081``) to this in your IDE of choice.
+
 
 Javascript Stack traces
 ---
