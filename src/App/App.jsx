@@ -10,8 +10,8 @@ import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 import { Colors } from 'react-native/Libraries/NewAppScreen'
 
-import { HomeScreen } from '../HomeScreen/HomeScreen'
-import { Contacts } from '../Contacts/Contacts'
+import { Screen1 } from '../Screen1/Screen1'
+import { Screen2 } from '../Screen2/Screen2'
 
 const Stack = createStackNavigator()
 
@@ -25,16 +25,14 @@ const App = () => {
               <View style={styles.sectionContainer}>
                 <Text style={styles.sectionTitle}>React Native Playground</Text>
                 <Stack.Screen
-                  name="Home"
-                  component={HomeScreen}
-                  options={{title: 'Home Page'}}
+                  name="Screen1"
+                  component={Screen1}
+                  options={{ title: 'Screen 1' }}
                 />
                 <Stack.Screen
-                  name="Details"
-                  npm
-                  run
-                  component={Contacts}
-                  options={{title: 'Contacts'}}
+                  name="Screen2"
+                  component={Screen2}
+                  options={{ title: 'Screen 2' }}
                 />
               </View>
             </View>
