@@ -1,13 +1,19 @@
-import 'react-native-gesture-handler';
-import React from 'react';
-import {SafeAreaView, StyleSheet, View, Text} from 'react-native';
-import {NavigationContainer} from '@react-navigation/native';
-import {createStackNavigator} from '@react-navigation/stack';
-import {Colors} from 'react-native/Libraries/NewAppScreen';
-import {HomeScreen} from '../HomeScreen/HomeScreen';
-import {Contacts} from '../Contacts/Contacts';
+import React from 'react'
+import {
+  SafeAreaView,
+  StyleSheet,
+  View,
+  Text,
+} from 'react-native'
+import 'react-native-gesture-handler'
+import { NavigationContainer } from '@react-navigation/native'
+import { createStackNavigator } from '@react-navigation/stack'
+import { Colors } from 'react-native/Libraries/NewAppScreen'
 
-const Stack = createStackNavigator();
+import { HomeScreen } from '../HomeScreen/HomeScreen'
+import { Contacts } from '../Contacts/Contacts'
+
+const Stack = createStackNavigator()
 
 const App = () => {
   return (
@@ -36,8 +42,8 @@ const App = () => {
         </Stack.Navigator>
       </NavigationContainer>
     </>
-  );
-};
+  )
+}
 
 const styles = StyleSheet.create({
   body: {
@@ -53,6 +59,6 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     color: Colors.black,
   },
-});
+})
 
-export default App;
+export default App
