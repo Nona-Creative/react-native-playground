@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.lighter,
     flex: 1,
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
   title: {
     fontSize: 34,
