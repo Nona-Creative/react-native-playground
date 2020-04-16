@@ -14,6 +14,13 @@ npm run help
 ```
 
 
+Quick Start
+---
+
+ 1. ``npm i`` install Node dependencies
+ 2. ``npm run init`` initiate project
+
+
 Quick Start (iOS)
 ---
 

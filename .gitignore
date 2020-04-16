@@ -73,5 +73,9 @@ index\.ios\.js\.map
 .idea
 .vscode
 
+# env
+.env
+
 # local
 .backups
+git-branch-errors.txt
