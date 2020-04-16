@@ -7,6 +7,8 @@ import App from './App'
 // eslint-disable-next-line import/order
 import renderer from 'react-test-renderer'
 
-it('renders correctly', () => {
-  renderer.create(<App />)
+describe('App', () => {
+  it('should successfully render', () => {
+    renderer.create(<App />)
+  })
 })
