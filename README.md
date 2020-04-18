@@ -1,7 +1,9 @@
 React Native Playground
 ===
 
-> A minimal React Native project for experimenting and refining templates / deployment pipelines
+> A React Native playground for isolating various technologies,
+> composing them to showcase how they integrate, 
+> and finally building real world use cases from those integrations
 
 Available commands
 --- 
@@ -11,10 +13,13 @@ to see a list of available commands run:
 npm run help
 ```
 
-to see a list of available Make commands run:
-```bash
-make
-```
+
+Quick Start
+---
+
+ 1. ``npm i`` install Node dependencies
+ 2. ``npm run init`` initiate project
+
 
 Quick Start (iOS)
 ---
@@ -29,10 +34,18 @@ Quick Start (iOS)
  1. ``npm run bundler:start:reset`` restart bundler with cache reset
  2. ``npm run start:ios`` start app
 
+
+Quick Start (Android)
+---
+
+TODO: document Android quick start
+
+
 Contributing
 ---
 
 Before contributing please read through everything in [Contributing](docs/contributing.md)
+
 
 Testing
 ---
@@ -46,9 +59,9 @@ Additional Docs
 ---
 
  1. [Prerequisites](docs/prerequisites.md)
- 2. [Contributing](docs/contributing.md)
- 3. [Debugging](docs/debugging.md)
- 4. [Gotchas](docs/gotchas.md)
- 5. [Deployment](docs/deployment.md)
- 6. [Node Version](docs/node-version.md)
- 7. [Branches](docs/branches.md)
+ 2. [Branches](docs/branches.md)
+ 3. [Contributing](docs/contributing.md)
+ 4. [Debugging](docs/debugging.md)
+ 5. [Gotchas](docs/gotchas.md)
+ 6. [Deployment](docs/deployment.md)
+ 7. [Node Version](docs/node-version.md)

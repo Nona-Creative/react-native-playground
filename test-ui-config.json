@@ -1,9 +1,12 @@
 {
   "preset": "react-native",
   "testMatch": [
-    "**/src/**/*.test.js"
+    "**/src/**/*.test.jsx"
   ],
   "transform": {
     "^.+\\.jsx?$": "babel-jest"
+  },
+  "globals": {
+    "window": {}
   }
 }

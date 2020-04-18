@@ -1,4 +1,4 @@
-React Native Playground :: Deployment
+Deployment
 ===
 
 Common
@@ -11,6 +11,7 @@ Copy these production settings into .env
 ```bash
 source .env
 ```
+
 
 Android
 ---
@@ -28,6 +29,7 @@ A targeted APK for:
 2. x86 architecture.
 
 Upload both ARM APK and x86 APK. Google Play will install the appropriate one when people download the app.
+
 
 iOS
 ---
