@@ -1,37 +1,52 @@
-React Native Playground :: Branches
+Branches
 ===
 
-> A hierarchy of current and planned branches.
-> Documentation about each branch should be added the to docs directory in the docs branch.
+> This repository follows a branch naming convention detailed in [git-compose](https://github.com/neilrussell6/git-compose)
 
-The ``*`` indicates the branch does not yet exist and is planned.
-When a branch is implemented the ``*`` should be removed from the docs branch and merged in ``develop``. 
+We have 3 types of branches:
+ - Isolation Branches
+ - Integration Branches
+ - Feature Branches
 
-### Isolated patterns, libraries and technologies
+### Special branches
 
-> Should demonstrate the specific pattern, library and technology in the simplest most isolated way possible
-> or clearly demonstrate how it builds on the parent.
+An **Isolation Branch** is a single technology in isolation, prefixed with ``iso__``.
+[read more ...](https://github.com/neilrussell6/git-compose/blob/master/docs/branches-isolation.md)
 
+An **Integration Branch** is an Integration between multiple technologies (ie. composed branches), prefixed with ``int__``.
+[read more ...](https://github.com/neilrussell6/git-compose/blob/master/docs/branches-integration.md)
+
+A **Feature Branch** is one or more Isolation and/or Integration Branches composed to create a foundation upon which a feature is built, prefixed with ``feat__``.
+[read more ...](https://github.com/neilrussell6/git-compose/blob/master/docs/branches-feature.md)
+
+### Other branches
+
+All **Other Branches** can be named whatever you want so long as they do not start with iso__, int__ or feat__ they will not be touched, by the commands below.
+This includes PR branches used to get code into "Special Branches".
+
+
+Auto Merging
+---
+
+NOTE: **git-compose** is used to keep all Special branches up to date,
+so expect parent branches to be consistently merged into child branches, 
+read more about this [here](https://github.com/neilrussell6/git-compose/blob/master/docs/commands-cascade-merge.md).
+
+
+Creating an Integration Branch
+---
+
+You can use **git-compose** to create an Integration Branch eg.
 ```
-develop
-+-- official_init
-+-- docs
-+-- devops *
-|   +-- devops__ci *
-|   +-- devops__scripts *
-|   +-- devops__makefile *
-+-- nav *
-+-- redux *
-|   +-- redux__reselect *
-|   +-- redux__middleware *
-|   +-- redux__epics *
+npx git-compose build_integration_branch <integration branch name>
 ```
+read more about this [here](https://github.com/neilrussell6/git-compose/blob/master/docs/commands-build-integration-branch.md)
 
-### Example feature implementations
 
-> Can combine any of the above branches to achieve the example feature implementation
+Displaying Branch Hierarchy
+---
 
+You can print out the Branch Hierarchy for the whole project using **git-compose** eg.
 ```
-develop
-+-- crypto-wallets *
+npx git-compose print_heirarchy
 ```
