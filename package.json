@@ -1,7 +1,6 @@
 {
   "name": "react-native-playground",
   "version": "0.0.1",
-  "private": true,
   "scripts": {
     "init": "cp .env.tpl .env",
     "start:android": "react-native run-android",
