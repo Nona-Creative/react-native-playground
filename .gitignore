@@ -1,8 +1,8 @@
-# OSX
+# OS : OSX
 #
 .DS_Store
 
-# Xcode
+# Mobile : Xcode
 #
 build/
 *.pbxuser
@@ -21,7 +21,7 @@ DerivedData
 *.ipa
 *.xcuserstate
 
-# Android/IntelliJ
+# Mobile : Android/IntelliJ
 #
 build/
 .idea
@@ -29,19 +29,13 @@ build/
 local.properties
 *.iml
 
-# node.js
-#
-node_modules/
-npm-debug.log
-yarn-error.log
-
-# BUCK
+# Mobile : BUCK
 buck-out/
 \.buckd/
 *.keystore
 !debug.keystore
 
-# fastlane
+# Mobile : Build : Fastlane
 #
 # It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
 # screenshots whenever they are needed.
@@ -52,30 +46,37 @@ buck-out/
 */fastlane/Preview.html
 */fastlane/screenshots
 
-# Bundle artifact
+# Mobile : Bundle artifacts
+#
 *.jsbundle
 *.jsbundle.map
 
-# CocoaPods
+# Mobile : Map files
+#
+index\.android\.js\.map
+index\.ios\.js\.map
+
+# Mobile : Dependencies
+#
 /ios/Pods/
 
-# misc
-.DS_Store
+# Javascript
+#
+node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# map files
-index\.android\.js\.map
-index\.ios\.js\.map
-
-# ide
+# IDE
+#
 .idea
 .vscode
 
-# env
+# Environment
+#
 .env
 
-# local
+# Misc
+#
 .backups
 git-branch-errors.txt
