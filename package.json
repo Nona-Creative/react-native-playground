@@ -17,7 +17,17 @@
     "test:ui:watch": "npm run test:ui -- --watch",
     "ci:test": "npm run test",
     "lint": "eslint --ext .js --ignore-path .gitignore .",
-    "debug": "open 'rndebugger://set-debugger-loc?host=localhost&port=8081'"
+    "debug": "open 'rndebugger://set-debugger-loc?host=localhost&port=8081'",
+    "_git:test": "npm run test -- --passWithNoTests",
+    "_git:pre-commit": "npm-run-all lint _git:test",
+    "_git:pre-push": "npm-run-all lint _git:test"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "npm run _git:pre-commit",
+      "pre-push": "npm run _git:pre-push"
+    }
   },
   "dependencies": {
     "ramda": "^0.27.0",
@@ -29,6 +39,8 @@
   "devDependencies": {
     "@babel/core": "^7.6.2",
     "@babel/runtime": "^7.6.2",
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
     "babel-jest": "^24.9.0",
     "eslint": "^6.5.1",
     "eslint-config-airbnb": "^18.1.0",
@@ -37,8 +49,10 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.19.0",
     "git-compose": "^0.1.1",
+    "husky": "^4.2.5",
     "jest": "^24.9.0",
     "metro-react-native-babel-preset": "^0.58.0",
+    "npm-run-all": "^4.1.5",
     "react-test-renderer": "16.11.0",
     "sinon": "^9.0.2"
   }
