@@ -14,8 +14,7 @@
     "ci:test": "npm run test -- --ci",
     "lint": "eslint --ext .js --ignore-path .gitignore .",
     "debug": "open 'rndebugger://set-debugger-loc?host=localhost&port=8081'",
-    "npm:audit": "npm run _npm:audit:spec",
-    "_npm:audit:spec": "audit-ci --critical"
+    "ci:npm-audit": "audit-ci --critical"
   },
   "dependencies": {
     "react": "16.11.0",
