@@ -4,14 +4,22 @@
  *
  * @format
  */
+const path = require('path')
 
-module.exports = {
-  transformer: {
-    getTransformOptions: async () => ({
-      transform: {
-        experimentalImportSupport: false,
-        inlineRequires: false,
-      },
-    }),
-  },
-}
+module.exports = (async () => {
+  return {
+    projectRoot: path.resolve(__dirname, '.'),
+    watchFolders: [
+      path.resolve(__dirname),
+      path.resolve(__dirname, 'node_modules'),
+    ],
+    transformer: {
+      getTransformOptions: async () => ({
+        transform: {
+          experimentalImportSupport: false,
+          inlineRequires: false,
+        },
+      }),
+    },
+  }
+})()

@@ -1,4 +1,3 @@
-import 'react-native'
 import React from 'react'
 
 import App from './App'
@@ -9,6 +8,7 @@ import renderer from 'react-test-renderer'
 
 describe('App', () => {
   it('should successfully render', () => {
+    // eslint-disable-next-line react/jsx-filename-extension
     renderer.create(<App />)
   })
 })
