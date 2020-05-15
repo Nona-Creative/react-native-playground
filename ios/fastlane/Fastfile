@@ -7,4 +7,12 @@ platform :ios do
     match(readonly: readonly)
     match(type: 'appstore', readonly: readonly)
   end
+
+  desc "Upload version to Testflight"
+  lane :beta do
+    cocoapods()
+    sync_code_signing(type: "appstore", readonly: true)
+    build_app(scheme: "ReactNativePlayground")
+    upload_to_testflight
+  end
 end
