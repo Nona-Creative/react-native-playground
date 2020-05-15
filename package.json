@@ -10,6 +10,7 @@
     "bundler:start:reset": "react-native start --config rn-cli.config.js --reset-cache",
     "bundle:ios": "react-native bundle --entry-file App.js --platform ios --dev false --bundle-output ios/main.jsbundle --assets-dest ios --sourcemap-output ios/main.jsbundle.map",
     "bundle:android": "react-native bundle --entry-file App.js --platform android --dev false --bundle-output android/main.jsbundle --assets-dest android --sourcemap-output android/main.jsbundle.map",
+    "ios:certificates": "cd ios && bundle exec fastlane certificates",
     "test": "jest --config test-config.json --ci",
     "test:watch": "npm run test -- --watch",
     "test:ui": "jest --config test-ui-config.json",
