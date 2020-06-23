@@ -28,6 +28,9 @@
       "pre-push": "npm run _git:pre-push"
     }
   },
+  "engines": {
+    "npm": "=6.14.5"
+  },
   "dependencies": {
     "react": "16.11.0",
     "react-native": "0.62.1"
